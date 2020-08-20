@@ -85,8 +85,8 @@ html {
 }
 
 .person-img {
-  width: 20rem;
-  height: 25rem;
+  width: 30rem;
+  height: 30rem;
   object-fit: cover;
   border-radius: 50%;
   border: 0.7rem dotted #2b4d6d;
@@ -288,18 +288,18 @@ html {
   text-align: center;
   letter-spacing: 0.1rem;
   position: absolute;
-  top: -15rem;
+  top: -20rem;
   z-index: 10;
   transition: top 0.3s;
 }
 
 .project:hover .project-text {
-  top: 5rem;
+  top: 3rem;
   transition: top 0.9s 0.3s;
 }
 
 .project-name {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #333;
   text-transform: capitalize;
