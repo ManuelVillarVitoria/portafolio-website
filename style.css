@@ -1,4 +1,3 @@
-/* Reset and Common Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +18,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bold {
+    font-weight: bold
 }
 
 .section-heading {
@@ -51,10 +54,10 @@ html {
 }
 
 .btn-download a {
-  background-color: #444;
+  background-color: #5d5dd5;
   padding: 2rem 2.5rem;
   margin-bottom: 1.2rem;
-  border: none;
+  border: 2px solid black;
   cursor: pointer;
   height: auto;
   border-radius: 0.5rem;
@@ -62,11 +65,14 @@ html {
   font-size: 1.7rem;
   font-weight: 700;
   transition: all .2s ease-in-out;
+}
 
+.btn-download a:hover {
+  background-color: #9a9ae5;
+  color:black
 }
 
 .btn-download i {
-
   margin-right: 1.5rem;
 }
 
@@ -93,6 +99,21 @@ html {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0.5rem;
   opacity: 0.9;
+  animation: wiggle 400ms 1s 8 ease-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(-30deg);
+  }
+
+  100% {
+    transform: rotateY(30deg);
+  }
 }
 
 .person-name {
@@ -116,6 +137,13 @@ html {
   letter-spacing: 0.3rem;
 }
 
+.section-1-btn:hover {
+  color: #fff;
+  background-color: #333;
+  border: 0.3rem solid #fff;
+  transition: 0.5s 0.2s;
+  opacity:0.8
+}
 
 .navbar {
   width: 100%;
@@ -186,11 +214,13 @@ html {
 .progress-bar {
   width: 130rem;
   height: 5.5rem;
-  background-color: #ccc;
+  background-color: #444;
   margin: 2.5rem 0;
   border-radius: 0.3rem;
   box-shadow: 0.2rem 0.2rem 1rem #555;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .progress-text {
@@ -215,7 +245,6 @@ html {
   border-radius: 0.3rem;
   transition: width 0.5s 0.5s ease-in-out;
 }
-
 
 .services {
   width: 100%;
@@ -347,6 +376,16 @@ html {
   transition: bottom 0.3s 0.3s;
 }
 
+.project-link-0:hover {
+  background-color: #2b4d6d;
+  opacity:0.8
+}
+
+.project-link-0:hover a {
+  color: #fff;
+  transition: 0.5s 0.3s;
+}
+
 .project-link-1 {
   font-size: 2rem;
   font-weight: 500;
@@ -366,6 +405,17 @@ html {
   left: 7rem;
   cursor: pointer;
   transition: bottom 0.3s 0.3s;
+ 
+}
+
+.project-link-1:hover {
+  background-color: #2b4d6d;
+  opacity:0.8
+}
+
+.project-link-1:hover a {
+  color: #fff;
+  transition: 0.5s 0.3s;
 }
 
 .project-link-2 {
@@ -389,9 +439,19 @@ html {
   transition: bottom 0.3s 0.3s;
 }
 
+.project-link-2:hover {
+  background-color: #2b4d6d;
+  opacity:0.8
+}
+
+.project-link-2:hover a {
+  color: #fff;
+  transition: 0.5s 0.3s;
+}
+
 .section-4 {
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   background-color: #333;
   display: flex;
   flex-direction: column;
@@ -428,14 +488,16 @@ html {
   color: #fff;
   box-shadow: none;
   border-color: #fff;
-  margin: 3rem 0 3rem 0;
+  margin-bottom: 3rem;
   font-size: 3rem;
+  text-align: center;
 }
 
 .social-media {
   text-align: center;
   margin-top: 2rem;
 }
+
 
 .social-media-link {
   margin: 0 2.5rem;
@@ -450,30 +512,32 @@ html {
   color: #fff;
 }
 
+.social-media-link:hover i {
+  opacity:0.7
+}
+
 .section-5 {
   width: 100%;
-  height: 5vh;
+  height: 3vh;
   background-color: #222;
   flex-direction: column;
 }
 
 
+@media(max-width: 350px){
 
-/* Responsive */
-@media (max-width: 1320px) {
-
-  html {
-    font-size: 65%;
+  .summary {
+    font-size: 1.3rem;
   }
-
-  .section-1-heading {
-    font-size: 4rem;
-    text-align: center;
-    padding: 0;
+  .section-heading  {
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+    margin: 60px 0px -25px 0px;
+    border-bottom-width: 0.2rem;
   }
 
   .section-2 {
-    padding: 10rem 2rem 2rem 2rem;
+    padding: 0rem 0rem 2rem 0rem
   }
 
   .services {
@@ -481,144 +545,878 @@ html {
     flex-wrap: wrap;
   }
 
-  .container-address {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .adress-item {
-    margin-right: 0;
-  }
-  
   .service {
-    margin: 3rem 2rem;
+    margin: 1.3rem 0rem;
   }
 
-  .section-1 {
-    height: 80vh;
-  }
-
-  .section-4 {
-    height: 45vh;
-  }
-
-  .progress-bar {
-    width: 70rem;
-    height: 8rem;
-    background-color: #444;
-  }
-
-  .btn-download a {
-    background-color: black;
-  }
-
-}
-
-@media (max-width: 800px) {
-
-  .section-1-heading {
-    font-size: 4rem;
-    text-align: center;
-    padding: 0;
-  }
-
-  .section-2 {
-    padding: 10rem 2rem 2rem 2rem;
-  }
-
-  .progress-bar {
-    width: 55rem;
-    height: 9rem;
-    background-color: #444;
-  }
-
-  .btn-download a {
-    background-color: black;
-  }
-
-}
-
-@media (max-width: 600px) {
-  .section-1-heading {
+  .service i {
     font-size: 3rem;
-    text-align: center;
-    padding: 0;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 1.3rem;
+    width: 20rem
+  }
+
+  .progress-bar {
+    width: 25rem;
+    height: 7rem;
+  }
+
+  .progress-bars-wrapper {
+    margin: 1.5rem 0rem -1rem;
+  }
+
+  .progress-text {
+    font-size: 1.3rem;
+    margin: 0.3rem
+  }
+
+  .progress-text span {
+    font-size: 1rem
+  }
+
+  .section-1-heading {
+    font-size: 1.5rem;
+    text-align:center;
+    letter-spacing: 0.6rem;
+    padding: 0px
+  }
+
+  .person-img {
+    width: 20rem;
+    height: 20rem;
+    border-width: 0.4rem;
+   
+  }
+
+  .person-name {
+    font-size: 1.2rem;
+    padding: 0.4rem
+  }
+
+  .section-1-btn { 
+  font-size: 0.9rem
   }
 
   .navbar-link {
-    margin: 0 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 0 1rem;
+    letter-spacing: 0.1rem;
   }
 
-  .section-2 {
-    padding: 10rem 2rem 2rem 2rem;
+  .btn-download a {
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .projects-wrapper {
+    width: 90%
+  }
+
+  .project-technologies {
+    font-size: 1.6rem
+  }
+
+  .project-link-0 {
+    font-size: 1.3rem;
+    
+  }
+
+  .project-link-1 {
+    font-size: 1.3rem
+  }
+
+  .project-link-2 {
+    font-size: 1.3rem
+  }
+
+  .project:hover .project-link-0 {
+    bottom: 1.5rem
+  }
+
+  .project:hover .project-link-1 {
+    left: 5rem;
+    bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .project:hover .project-link-2 {
+    left: 15rem;
+    bottom: 2rem;
+    padding: 0 0.5rem;
   }
 
   .project-img {
-    width: 100%;
+    height: 20rem
   }
 
-  .contact-form {
-    width: 40rem;
+  .project-name {
+    font-size: 1.9rem;
+    margin: -20px 0px 5px 0px
+  }
+
+  .section-3-heading {
+    margin-top: -30px
+  }
+
+  .container-address {
+    flex-direction: column;
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 1.5rem
+  }
+
+  .address span {
+    font-size: 1.5rem
+  }
+
+  .section-4-heading {
+    font-size: 1.6rem;
+    margin: 0px 0px 0px 0px
+  }
+
+  .social-media {
+    margin-top: -1rem
+  }
+
+  .social-media-link i {
+    font-size: 3rem
+  }
+
+  .social-media-link {
+    padding: 0.4rem
+  }
+}
+
+
+@media (min-width: 351px)and (max-width: 425px){
+
+  .summary {
+    font-size: 1.5rem;
+  }
+  .section-heading  {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    margin: 60px 0px -25px 0px;
+    border-bottom-width: 0.2rem;
+  }
+
+  .section-2 {
+    padding: 0rem 0rem 2rem 0rem
+  }
+
+  .services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    margin: 1.3rem 0rem;
+  }
+
+  .service i {
+    font-size: 3.5rem;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 1.5rem;
+    width: 25rem
   }
 
   .progress-bar {
-    width: 50rem;
-    height: 12rem;
-    background-color: #444;
+    width: 30rem;
+    height: 8rem;
+  }
+
+  .progress-bars-wrapper {
+    margin: 1.5rem 0rem -1rem;
+  }
+
+  .progress-text {
+    font-size: 1.5rem;
+    margin: 0.3rem
+  }
+
+  .progress-text span {
+    font-size: 1.2rem
+  }
+
+  .section-1-heading {
+    font-size: 1.9rem;
+    text-align:center;
+    letter-spacing: 0.7rem;
+    padding: 0px
+  }
+
+  .person-img {
+    width: 20rem;
+    height: 20rem;
+    border-width: 0.4rem;
+   
+  }
+
+  .person-name {
+    font-size: 1.3rem;
+    padding: 0.5rem
+  }
+
+  .section-1-btn { 
+  font-size: 1.1rem
+  }
+
+  .navbar-link {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    letter-spacing: 0.1rem;
   }
 
   .btn-download a {
-    background-color: black;
+    padding: 1rem 1.25rem;
+    font-size: 1.3rem;
   }
-  
+
+  .projects-wrapper {
+    width: 90%
+  }
+
+  .project-technologies {
+    font-size: 1.8rem
+  }
+
+  .project-link-0 {
+    font-size: 1.5rem;
+    
+  }
+
+  .project-link-1 {
+    font-size: 1.5rem
+  }
+
+  .project-link-2 {
+    font-size: 1.5rem
+  }
+
+  .project:hover .project-link-0 {
+    bottom: 3rem
+  }
+
+  .project:hover .project-link-1 {
+    left: 7rem;
+    padding: 0 0.5rem;
+  }
+
+  .project:hover .project-link-2 {
+    left: 17rem;
+    padding: 0 0.5rem;
+  }
+
+  .project-img {
+    height: 25rem
+  }
+
+  .project-name {
+    font-size: 2.1rem;
+    margin: -20px 0px 5px 0px
+  }
+
+  .section-3-heading {
+    margin-top: -30px
+  }
+
+  .container-address {
+    flex-direction: column;
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 1.8rem
+  }
+
+  .address span {
+    font-size: 1.8rem
+  }
+
+  .section-4-heading {
+    font-size: 1.8rem;
+    margin: 0px 0px 0px 0px
+  }
+
+  .social-media {
+    margin-top: -1rem
+  }
+
+  .social-media-link i {
+    font-size: 4rem
+  }
+
+  .social-media-link {
+    padding: 0.4rem
+  }
 }
 
-@media (max-width: 500px) {
-  html {
-    font-size: 55%;
+
+@media (min-width: 426px)and (max-width: 767px){
+
+  .section-1 {
+    height: 100%;
+  }
+
+  .summary {
+    font-size: 1.6rem;
+  }
+
+  .section-heading  {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    margin: 60px 0px -25px 0px;
+    border-bottom-width: 0.2rem;
+  }
+
+  .section-2 {
+    padding: 0rem 0rem 2rem 0rem
+  }
+
+  .services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    margin: 1.3rem 0rem;
+  }
+
+  .service i {
+    font-size: 4.5rem;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 1.75rem;
+    width: 25rem
   }
 
   .progress-bar {
-    width: 45rem;
-    height: 12.5rem;
-    background-color: #444;
+    width: 60rem;
+    height: 8rem;
   }
 
-  .btn-download a {
-    background-color: black;
+  .progress-bars-wrapper {
+    margin: 1.5rem 0rem -1rem;
   }
-}
 
-@media (max-width: 450px) {
-  html {
-    font-size: 45%;
+  .progress-text {
+    font-size: 1.7rem;
+    margin: 0.3rem
+  }
+
+  .progress-text span {
+    font-size: 1.4rem
   }
 
   .section-1-heading {
     font-size: 2.5rem;
-    text-align: center;
-    padding: 0;
+    text-align:center;
+    letter-spacing: 1rem;
+    padding: 10px;
+    margin-top:40px
+  }
+
+  .person-img {
+    width: 25rem;
+    height: 25rem;
+    border-width: 0.5rem 
+  }
+
+  .person-name {
+    font-size: 1.8rem;
+    padding: 0.7rem
+  }
+
+  .section-1-btn { 
+  font-size: 1.4rem;
+  margin-bottom: 50px
   }
 
   .navbar-link {
-    margin: 0 1.5rem;
-  }
-
-  .section-2-heading {
-    text-align: center;
-  }
-
-  .progress-bar {
-    width: 45rem;
-    height: 12.5rem;
-    background-color: #444;
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    letter-spacing: 0.2rem;
   }
 
   .btn-download a {
-    background-color: black;
+    padding: 1.25rem 1.35rem;
+    font-size: 1.5rem;
   }
 
+  .projects-wrapper {
+    width: 100%
+  }
 
+  .project-technologies {
+    font-size: 2rem
+  }
+
+  .project-link-0 {
+    font-size: 1.8rem;
+  }
+
+  .project-link-1 {
+    font-size: 1.8rem
+  }
+
+  .project-link-2 {
+    font-size: 1.8rem
+  }
+
+  .project:hover .project-link-0 {
+    bottom: 3rem
+  }
+
+  .project:hover .project-link-1 {
+    left: 7rem
+  }
+
+  .project:hover .project-link-2 {
+    left: 22rem
+  }
+
+  .project-img {
+    height: 27rem
+  }
+
+  .project-name {
+    font-size: 2.4rem;
+    margin: -20px 0px 5px 0px
+  }
+
+  .section-3-heading {
+    margin-top: -30px
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 1.8rem
+  }
+
+  .address span {
+    font-size: 1.8rem
+  }
+
+  .section-4 {
+    height: 45vh
+  }
+
+  .section-4-heading {
+    font-size: 2rem;
+    margin: 0px 0px 0px 0px
+  }
+
+  .social-media {
+    margin-top: -1rem
+  }
+
+  .social-media-link i {
+    font-size: 4rem
+  }
+
+  .social-media-link {
+    padding: 0.4rem
+  }
 }
-/* End of Responsive */
+
+@media (min-width: 568px) and (max-width: 569px){
+
+  .section-4 {
+    height: 70vh
+  }
+  .navbar-link {
+    font-size: 1.4rem;
+  }
+
+  .progress-bar {
+    width: 50rem;
+  }
+
+  .service i {
+    font-size: 4rem;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 1.6rem;
+    width: 20rem
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 1.6rem
+  }
+
+  .address span {
+    font-size: 1.6rem
+  }
+
+  .section-4-heading {
+    font-size: 2rem;
+    margin: 0px 0px 30px 0px
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+  .summary {
+    font-size: 1.6rem;
+  }
+
+  .section-heading  {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    margin: 60px 0px -25px 0px;
+    border-bottom-width: 0.2rem;
+  }
+
+  .section-2 {
+    padding: 0rem 0rem 2rem 0rem
+  }
+
+  .services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    margin: 1.3rem 0rem;
+  }
+
+  .service i {
+    font-size: 4.5rem;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 1.75rem;
+    width: 30rem
+  }
+
+  .progress-bar {
+    width: 70rem;
+    height: 7rem;
+  }
+
+  .progress-bars-wrapper {
+    margin: 1.5rem 0rem -1rem;
+  }
+
+  .progress-text {
+    font-size: 1.7rem;
+    margin: 0.3rem
+  }
+
+  .progress-text span {
+    font-size: 1.4rem
+  }
+
+  .section-1-heading {
+    font-size: 3rem;
+    text-align:center;
+    letter-spacing: 1rem;
+    padding: 10px;
+    margin-top:40px
+  }
+
+  .person-img {
+    width: 25rem;
+    height: 25rem;
+    border-width: 0.5rem 
+  }
+
+  .person-name {
+    font-size: 1.8rem;
+    padding: 0.7rem
+  }
+
+  .section-1-btn { 
+  font-size: 1.4rem;
+  margin-bottom: 50px
+  }
+
+  .navbar-link {
+    font-size: 1.6rem;
+    margin: 0 4rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .btn-download a {
+    padding: 1.25rem 1.35rem;
+    font-size: 1.5rem;
+  }
+
+  .projects-wrapper {
+    width: 100%
+  }
+
+  .project-technologies {
+    font-size: 2rem
+  }
+
+  .project-link-0 {
+    font-size: 1.8rem;
+    
+  }
+
+  .project-link-1 {
+    font-size: 1.8rem
+  }
+
+  .project-link-2 {
+    font-size: 1.8rem
+  }
+
+  .project:hover .project-link-0 {
+    bottom: 3rem
+  }
+
+  .project:hover .project-link-1 {
+    left: 7rem
+  }
+
+  .project:hover .project-link-2 {
+    left: 22rem
+  }
+
+  .project-img {
+    height: 27rem
+  }
+
+  .project-name {
+    font-size: 2.4rem;
+    margin: -20px 0px 5px 0px
+  }
+
+  .section-3-heading {
+    margin-top: -30px
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 1.8rem
+  }
+
+  .address span {
+    font-size: 1.8rem
+  }
+
+  .section-4 {
+    height: 30vh
+  }
+
+  .section-4-heading {
+    font-size: 2rem;
+    margin: -70px 0px 0px 0px
+  }
+
+  .social-media {
+    margin-top: -1rem
+  }
+
+  .social-media-link i {
+    font-size: 4rem
+  }
+
+  .social-media-link {
+    padding: 0.4rem
+  }
+}
+
+@media (min-width: 812px) and (max-width: 824px){
+  .section-4 {
+    height: 70vh
+  }
+
+  .section-1 {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1349px){
+
+  .summary {
+    font-size: 1.8rem;
+  }
+
+  .section-heading  {
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    margin: 60px 0px -25px 0px;
+    border-bottom-width: 0.2rem;
+  }
+
+  .section-2 {
+    padding: 0rem 0rem 2rem 0rem
+  }
+
+  .services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    margin: 1.6rem 0rem;
+  }
+
+  .service i {
+    font-size: 5rem;
+    margin-bottom: 1rem
+  }
+
+  .service h2 {
+    font-size: 2rem;
+    width: 30rem
+  }
+
+  .progress-bar {
+    width: 95rem;
+    height: 6rem;
+  }
+
+  .progress-bars-wrapper {
+    margin: 1.5rem 0rem -1rem;
+  }
+
+  .progress-text {
+    font-size: 1.9rem;
+    margin: 0.3rem
+  }
+
+  .progress-text span {
+    font-size: 1.5rem
+  }
+
+  .section-1-heading {
+    font-size: 3.5rem;
+    text-align:center;
+    letter-spacing: 1rem;
+    padding: 10px;
+    margin-top:40px
+  }
+
+  .person-img {
+    width: 30rem;
+    height: 30rem;
+    border-width: 0.6rem 
+  }
+
+  .person-name {
+    font-size: 2.1rem;
+    padding: 0.7rem
+  }
+
+  .section-1-btn { 
+  font-size: 1.7rem;
+  margin-bottom: 50px
+  }
+
+  .navbar-link {
+    font-size: 1.8rem;
+    margin: 0 6rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .btn-download a {
+    padding: 1.4rem 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  .projects-wrapper {
+    width: 100%
+  }
+
+  .project-technologies {
+    font-size: 2.3rem
+  }
+
+  .project-link-0 {
+    font-size: 1.9rem;
+  }
+
+  .project-link-1 {
+    font-size: 1.9rem
+  }
+
+  .project-link-2 {
+    font-size: 1.9rem
+  }
+
+  .project:hover .project-link-0 {
+    bottom: 3rem
+  }
+
+  .project:hover .project-link-1 {
+    left: 7rem
+  }
+
+  .project:hover .project-link-2 {
+    left: 22rem
+  }
+
+  .project-name {
+    font-size: 2.4rem;
+    margin: -20px 0px 5px 0px
+  }
+
+  .section-3-heading {
+    margin-top: -30px
+  }
+
+  .adress-item {
+    margin-right: 25px
+  }
+
+  .address {
+    font-size: 2rem
+  }
+
+  .address span {
+    font-size: 2rem
+  }
+
+  .section-4-heading {
+    font-size: 3rem;
+    margin: -10px 0px 0px 0px
+  }
+
+  .social-media {
+    margin-top: -1rem;
+   
+  }
+
+  .social-media-link i {
+    font-size: 4.5rem;
+  }
+
+  .social-media-link {
+    padding: 0.5rem
+  }
+}
+
+
