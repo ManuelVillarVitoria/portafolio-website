@@ -5,6 +5,12 @@ const navbarLinks = document.querySelectorAll(".navbar-link");
 const progress = document.querySelector(".progress-bars-wrapper");
 const progressBarPercents = [85, 85, 70, 80, 70, 75, 80, 80, 85, 80, 55];
 
+const copyright = document.getElementById("copy");
+const update = new Date().getFullYear();
+
+copyright.innerHTML = `Copyright &copy; Manuel Villar ${update}`
+
+
 window.addEventListener("scroll", () => {
   mainFn();
 });

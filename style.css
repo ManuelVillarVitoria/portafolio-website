@@ -14,6 +14,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.link {
+  color: #2b4d6d;
+}
+
+.link:hover {
+  color: #5d5dd5;
+  text-decoration: underline;
+}
+
+#copy {
+  color: #ccc;
+  font-size: 1.5rem;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -31,6 +45,7 @@ html {
   letter-spacing: 0.5rem;
   border-bottom: 0.3rem solid #333;
   text-shadow: 0.2rem 0.2rem 0.5rem #555;
+  margin: -3.5rem 0rem -1rem 0rem;
 }
 
 .section-1 {
@@ -48,21 +63,21 @@ html {
 .summary {
   font-size: 2rem;
   font-weight: 300;
-  padding:  1rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
   margin: 3.5rem;
   text-align: justify;
 }
 
 .btn-download a {
   background-color: #5d5dd5;
-  padding: 2rem 2.5rem;
+  padding: 2rem;
   margin-bottom: 1.2rem;
   border: 2px solid black;
   cursor: pointer;
   height: auto;
   border-radius: 0.5rem;
   color: white;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 700;
   transition: all .2s ease-in-out;
 }
@@ -451,7 +466,7 @@ html {
 
 .section-4 {
   width: 100%;
-  height: 30vh;
+  height: 33vh;
   background-color: #333;
   display: flex;
   flex-direction: column;
@@ -498,7 +513,6 @@ html {
   margin-top: 2rem;
 }
 
-
 .social-media-link {
   margin: 0 2.5rem;
   padding: 0.7rem;
@@ -518,14 +532,16 @@ html {
 
 .section-5 {
   width: 100%;
-  height: 3vh;
+  height: 6vh;
   background-color: #222;
   flex-direction: column;
 }
 
 
 @media(max-width: 350px){
-
+  #copy {
+    font-size: 1rem;
+  }
   .summary {
     font-size: 1.3rem;
   }
@@ -538,6 +554,10 @@ html {
 
   .section-2 {
     padding: 0rem 0rem 2rem 0rem
+  }
+
+  .section-4 {
+    height: 35vh;
   }
 
   .services {
@@ -607,8 +627,8 @@ html {
   }
 
   .btn-download a {
-    padding: 1rem 1.25rem;
-    font-size: 1.1rem;
+    padding: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .projects-wrapper {
@@ -697,7 +717,9 @@ html {
 
 
 @media (min-width: 351px)and (max-width: 425px){
-
+  #copy {
+    font-size: 1.2rem;
+  }
   .summary {
     font-size: 1.5rem;
   }
@@ -779,8 +801,8 @@ html {
   }
 
   .btn-download a {
-    padding: 1rem 1.25rem;
-    font-size: 1.3rem;
+    padding: 1.4rem;
+    font-size: 1.4rem;
   }
 
   .projects-wrapper {
@@ -863,10 +885,20 @@ html {
   .social-media-link {
     padding: 0.4rem
   }
+  .section-4 {
+    height: 35vh;
+  }
 }
 
 
 @media (min-width: 426px)and (max-width: 767px){
+  #copy {
+    font-size: 1.3rem;
+  }
+
+  .section-5 {
+    height: 10vh;
+  }
 
   .section-1 {
     height: 100%;
@@ -874,6 +906,7 @@ html {
 
   .summary {
     font-size: 1.6rem;
+    padding
   }
 
   .section-heading  {
@@ -955,8 +988,8 @@ html {
   }
 
   .btn-download a {
-    padding: 1.25rem 1.35rem;
-    font-size: 1.5rem;
+    padding: 1.6rem;
+    font-size: 1.6rem;
   }
 
   .projects-wrapper {
@@ -1017,7 +1050,7 @@ html {
   }
 
   .section-4 {
-    height: 45vh
+    height: 55vh
   }
 
   .section-4-heading {
@@ -1041,8 +1074,13 @@ html {
 @media (min-width: 568px) and (max-width: 569px){
 
   .section-4 {
-    height: 70vh
+    height: 65vh
   }
+
+  .section-5 {
+    height: 12vh
+  }
+
   .navbar-link {
     font-size: 1.4rem;
   }
@@ -1164,7 +1202,7 @@ html {
   }
 
   .btn-download a {
-    padding: 1.25rem 1.35rem;
+    padding: 1.5;
     font-size: 1.5rem;
   }
 
@@ -1246,6 +1284,7 @@ html {
   .social-media-link {
     padding: 0.4rem
   }
+
 }
 
 @media (min-width: 812px) and (max-width: 824px){
@@ -1253,11 +1292,19 @@ html {
     height: 70vh
   }
 
+  .section-5 {
+    height: 10vh
+  }
+
   .section-1 {
     height: 100%;
   }
+
+  .section-4-heading {
+    margin: -30px 0px 0px 0px;
 }
 
+/* IPad */
 @media (min-width: 1024px) and (max-width: 1349px){
 
   .summary {
@@ -1343,8 +1390,8 @@ html {
   }
 
   .btn-download a {
-    padding: 1.4rem 1.5rem;
-    font-size: 1.7rem;
+    padding: 1.8rem;
+    font-size: 1.8rem;
   }
 
   .projects-wrapper {
@@ -1417,6 +1464,7 @@ html {
   .social-media-link {
     padding: 0.5rem
   }
+
 }
 
 
