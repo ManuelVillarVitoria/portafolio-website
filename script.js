@@ -3,7 +3,7 @@ const navbarOffsetTop = navbar.offsetTop;
 const sections = document.querySelectorAll("section");
 const navbarLinks = document.querySelectorAll(".navbar-link");
 const progress = document.querySelector(".progress-bars-wrapper");
-const progressBarPercents = [85, 85, 70, 80, 70, 75, 80, 80, 85, 80, 55];
+const progressBarPercents = [80, 70, 75, 70, 60, 60, 70, 70, 70, 75];
 
 const copyright = document.getElementById("copy");
 const update = new Date().getFullYear();
