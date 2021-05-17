@@ -11,7 +11,7 @@ const update = new Date().getFullYear();
 copyright.innerHTML = `Copyright &copy; Manuel Villar ${update}`
 
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => { 
   mainFn();
 });
 
